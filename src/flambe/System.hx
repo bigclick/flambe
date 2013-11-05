@@ -60,6 +60,11 @@ class System
      * The Web subsystem, for using the device's web browser.
      */
     public static var web (get, null) :WebSystem;
+	
+    /**
+     * The Form subsystem, for using the device's form elements.
+     */
+    public static var form (get, null) :FormSystem;
 
     /**
      * The External subsystem, for interaction with external code.
@@ -206,6 +211,12 @@ class System
     {
         #if debug assertCalledInit(); #end
         return _platform.getWeb();
+    }
+	
+    inline private static function get_form () :FormSystem
+    {
+        #if debug assertCalledInit(); #end
+        return _platform.getForm();
     }
 
     inline private static function get_external () :ExternalSystem

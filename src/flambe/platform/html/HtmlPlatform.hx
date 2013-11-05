@@ -371,6 +371,14 @@ class HtmlPlatform
         }
         return _web;
     }
+	
+    public function getForm () :FormSystem
+    {
+        if (_form == null) {
+            _form = new HtmlForm(_container);
+        }
+        return _form;
+    }
 
     public function getExternal () :ExternalSystem
     {
@@ -446,6 +454,7 @@ class HtmlPlatform
     private var _motion :MotionSystem;
     private var _storage :StorageSystem;
     private var _web :WebSystem;
+	private var _form :FormSystem;
 
     private var _canvas :CanvasElement;
     private var _container :Element;

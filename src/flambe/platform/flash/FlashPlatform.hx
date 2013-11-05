@@ -160,6 +160,15 @@ class FlashPlatform
         }
         return _web;
     }
+	
+    public function getForm () :FormSystem
+    {
+        if (_form == null) {
+            _form = FlashForm.shouldUse() ?
+                new FlashForm(_stage.nativeStage) : new DummyForm();
+        }
+        return _form;
+    }
 
     public function getExternal () :ExternalSystem
     {
@@ -263,6 +272,7 @@ class FlashPlatform
     private var _motion :MotionSystem;
     private var _storage :StorageSystem;
     private var _web :WebSystem;
+	private var _form :FormSystem;
 
     private var _lastUpdate :Int;
     private var _skipFrame :Bool;
