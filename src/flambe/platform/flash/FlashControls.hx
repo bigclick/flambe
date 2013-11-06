@@ -13,12 +13,12 @@ import flash.text.TextFormat;
 import flash.text.TextFormatAlign;
 
 import flambe.animation.AnimatedFloat;
-import flambe.subsystem.FormSystem;
+import flambe.subsystem.ControlsSystem;
 import flambe.util.Value;
-import flambe.form.TextField;
+import flambe.controls.TextField;
 
-class FlashForm
-	implements FormSystem
+class FlashControls
+	implements ControlsSystem
 {
 	
 	public var supported (get, null) :Bool;

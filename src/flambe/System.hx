@@ -62,9 +62,9 @@ class System
     public static var web (get, null) :WebSystem;
 	
     /**
-     * The Form subsystem, for using the device's form elements.
+     * The Controls subsystem, for using the device's control elements.
      */
-    public static var form (get, null) :FormSystem;
+    public static var controls (get, null) :ControlsSystem;
 
     /**
      * The External subsystem, for interaction with external code.
@@ -213,10 +213,10 @@ class System
         return _platform.getWeb();
     }
 	
-    inline private static function get_form () :FormSystem
+    inline private static function get_controls () :ControlsSystem
     {
         #if debug assertCalledInit(); #end
-        return _platform.getForm();
+        return _platform.getControls();
     }
 
     inline private static function get_external () :ExternalSystem

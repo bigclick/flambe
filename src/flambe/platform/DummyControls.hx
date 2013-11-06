@@ -4,12 +4,12 @@
 
 package flambe.platform;
 
-import flambe.subsystem.FormSystem;
+import flambe.subsystem.ControlsSystem;
 import flambe.util.Assert;
-import flambe.form.TextField;
+import flambe.controls.TextField;
 
-class DummyForm
-    implements FormSystem
+class DummyControls
+    implements ControlsSystem
 {
     public var supported (get, null) :Bool;
 
@@ -24,7 +24,7 @@ class DummyForm
 
     public function createTextField (x :Float, y :Float, width :Float, height :Float) :TextField
     {
-        Assert.fail("Form.createTextField is unsupported in this environment, check the `supported` flag.");
+        Assert.fail("Controls.createTextField is unsupported in this environment, check the `supported` flag.");
         return null;
     }
 }

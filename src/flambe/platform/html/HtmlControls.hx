@@ -7,12 +7,12 @@ package flambe.platform.html;
 import js.Browser;
 
 import flambe.animation.AnimatedFloat;
-import flambe.subsystem.FormSystem;
+import flambe.subsystem.ControlsSystem;
 import flambe.util.Value;
-import flambe.form.TextField;
+import flambe.controls.TextField;
 
-class HtmlForm
-    implements FormSystem
+class HtmlControls
+    implements ControlsSystem
 {
     public var supported (get, null) :Bool;
 
